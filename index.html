@@ -77,19 +77,29 @@
 
         /* Botón principal */
         .btn {
-            background-color: var(--color-primary);
-            color: white;
-            padding: 10px 20px;
+            background-color: var(--color-secondary);
+            color: var(--color-dark);
+            padding: 15px 30px;
             border: none;
             cursor: pointer;
             text-transform: uppercase;
-            font-size: 1rem;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            font-size: 1.2rem;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .btn:hover {
             background-color: var(--color-primary-dark);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 40px;
         }
 
         /* Sección de características */
@@ -149,7 +159,7 @@
 
         .faq-item p {
             display: none;
-            margin-top: 15px;
+            margin-top: 8px;
         }
 
         .faq-item.active p {
@@ -247,7 +257,7 @@
         <h2>Preguntas Frecuentes</h2>
         <div class="faq-item">
             <h3>Acerca de la aplicación</h3>
-            <p>Por el moemento no se cuenta con una aplicación 100% funcional
+            <p>Por el momento no se cuenta con una aplicación 100% funcional
 		    dado a que hemos tenido dificultades con el correcto funcionamiento de la aplicación </p>
         </div>
         <div class="faq-item">
@@ -261,37 +271,21 @@
     <section id="contacto">
         <h2>Contacto</h2>
         <p>Para más información sobre nuestra aplicación, contáctanos en <strong>pastfast520@gmail.com</strong></p>
-	<p>  </p>
-	<p>  </p>
-	<p>  </p>
-	<div class="button-container">
-            <a href="imagenes.html" class="btn">Previsualizar la App</a>
-        </div>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=61565851337192&mibextid=ZbWKwL" target="_blank" aria-label="Facebook" rel="noopener noreferrer">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://www.tiktok.com/@fastpast6?_t=8rQeZWGMMBc&_r=1" target="_blank" aria-label="TikTok" rel="noopener noreferrer">
-                <i class="fab fa-tiktok"></i>
-            </a>
-             <a href="https://www.instagram.com/fastpast2/profilecard/?igsh=MWZiem5zZDVmY2IwbA=="_blank" aria-label="TikTok" rel="noopener noreferrer">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>
     </section>
+
+    <!-- Botón principal -->
+    <div class="button-container">
+        <a href="imagenes.html" class="btn">Previsualizar la App</a>
+    </div>
 
     <!-- Pie de página -->
     <footer>
-        <p>&copy; 2024 Fast Past. Todos los derechos reservados.</p>
+        <p>© 2024 Fast Past. Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <a href="#" class="fab fa-facebook"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+        </div>
     </footer>
-
-    <!-- Script para FAQ -->
-    <script>
-        document.querySelectorAll('.faq-item').forEach(item => {
-            item.addEventListener('click', () => {
-                item.classList.toggle('active');
-            });
-        });
-    </script>
 </body>
 </html>
